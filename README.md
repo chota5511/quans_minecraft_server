@@ -123,3 +123,5 @@ From `docker-compose.yml` location folder run command bellow
 `For administrators`, download [mcron](https://sourceforge.net/projects/mcrcon/) (Windows) or [mcron](https://github.com/Tiiffi/mcrcon) (Linux). Provide it with your instance ip (localhost loopback ip - 172.0.0.1), port (default - 25575) and `<your password>`.
 
 `For players`, access to the MC server with your public ip (local access via localhost loopback ip - 172.0.0.1) throught configurated port (default - 25565)
+
+**All config must update through Docker ENV otherwise it will not be saved and be reset back to ENV configuration after restart**
