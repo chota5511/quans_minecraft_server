@@ -125,3 +125,8 @@ From `docker-compose.yml` location folder run command bellow
 `For players`, access to the MC server with your public ip (local access via localhost loopback ip - 172.0.0.1) throught configurated port (default - 25565)
 
 **All config must update through Docker ENV otherwise it will not be saved and be reset back to ENV configuration after restart**
+
+## Authors
+  - **Nguyen Ly Quan** - *Develop* - [chota5511](https://github.com/chota5511/)
+
+  See also the list of [contributors](https://github.com/chota5511/quans_minecraft_server/graphs/contributors) who participated in this project.
