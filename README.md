@@ -60,7 +60,7 @@ From `docker-compose.yml` location folder run command bellow
 | ENV name | Default value | Description                             |
 | -------- | ------------- | --------------------------------------- |
 | min_mem  | 2G            | Minimum memory allocated for JVM        |
-| max_mem  | 2G            | Maximum memory will be allocate for JVM |
+| max_mem  | 2G            | Maximum memory will be allocated for JVM |
 
 ## Maping table for server.properties and default values
 | server.properties                 | Default value      | Docker ENV                        |

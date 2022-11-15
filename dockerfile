@@ -58,8 +58,8 @@ ENV resource_pack_sha1=""
 ENV spawn_protection=16
 ENV max_world_size=29999984
 
-COPY ./jars/${MCFILE} /mcfile/server.jar
-COPY ./run_mc.sh /mcfile/run_mc.sh
+COPY ./jars/${MCFILE} /server.jar
+COPY ./run_mc.sh /run_mc.sh
 COPY ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT /entrypoint.sh

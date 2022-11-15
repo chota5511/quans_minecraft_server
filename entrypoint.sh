@@ -27,11 +27,18 @@ echo "Wecome to Quan Nguyen's Minecraft Server for Docker container
 "
 
 echo "Get memory configuration from ENV"
-sed -i "s/@min_mem/$min_mem/g" /mcfile/run_mc.sh
-sed -i "s/@max_mem/$max_mem/g" /mcfile/run_mc.sh
+sed -i "s/@min_mem/$min_mem/g" /run_mc.sh
+sed -i "s/@max_mem/$max_mem/g" /run_mc.sh
+
+if [ -d "mcfile" ]; then
+    echo "mcfile directory existed"
+else
+    echo "mcfile directory does not exist, create mcfile directory"
+    mkdir mcfile
+fi
 
 echo "Generate Minecraft Server files"
-/mcfile/run_mc.sh
+/run_mc.sh
 
 echo "Auto accept EULA"
 sed -i "s/eula=false/eula=true/g" /mcfile/eula.txt
@@ -92,4 +99,4 @@ sed -i "s/spawn-protection=16/spawn-protection=$spawn_protection/g" /mcfile/serv
 sed -i "s/max-world-size=29999984/max-world-size=$max_world_size/g" /mcfile/server.properties
 
 echo "Starting Minecraft Server"
-/mcfile/run_mc.sh
+/run_mc.sh
