@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo '
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -36,6 +36,12 @@ else
     echo "mcfile directory does not exist, create mcfile directory"
     mkdir mcfile
 fi
+
+echo "Create minecraft application user"
+adduser -D minecraft
+
+echo "Set RW of mcfile to minecraft user"
+chmod 777 /mcfile
 
 echo "Generate Minecraft Server files"
 /run_mc.sh

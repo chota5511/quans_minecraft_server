@@ -1,8 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-cd /mcfile/
-
-java \
+su - minecraft -c "cd /mcfile/ && java \
     -Xms@min_mem \
     -Xmx@max_mem \
     -XX:+UseG1GC \
@@ -25,4 +23,4 @@ java \
     -XX:MaxTenuringThreshold=1 \
     -Dusing.aikars.flags=https://mcflags.emc.gs \
     -Daikars.new.flags=true \
-    -jar /server.jar --nogui
+    -jar /server.jar --nogui"

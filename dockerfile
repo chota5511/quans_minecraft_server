@@ -1,4 +1,4 @@
-FROM amazoncorretto:17
+FROM amazoncorretto:17-alpine-jdk
 
 ARG MCFILE=paper-1.19.2-270.jar
 
@@ -58,8 +58,12 @@ ENV resource_pack_sha1=""
 ENV spawn_protection=16
 ENV max_world_size=29999984
 
-COPY ./jars/${MCFILE} /server.jar
-COPY ./run_mc.sh /run_mc.sh
-COPY ./entrypoint.sh /entrypoint.sh
+ADD ./jars/${MCFILE} /server.jar
+ADD ./run_mc.sh /run_mc.sh
+ADD ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT /entrypoint.sh
+RUN apk upgrade --update
+RUN chmod +x /entrypoint.sh
+RUN chmod +x /run_mc.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
