@@ -1,0 +1,17 @@
+version: '3'
+services:
+  quans_minecraft_server:
+    image: chota5511/quans_mc_server:latest
+    container_name: quans_minecraft_server
+    ports:
+      - 25565:25565
+      - 25575:25575
+    environment:
+      - min_mem=6G
+      - max_mem=6G
+      - motd="Quan Nguyen's Minecraft Server"
+      - difficulty=normal
+      - rcon_password=<your password>
+    volumes:
+      - ./data/:/mcfile/
+    restart: unless-stopped
