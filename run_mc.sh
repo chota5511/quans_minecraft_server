@@ -23,4 +23,4 @@ su - minecraft -c "cd /mcfile/ && java \
     -XX:MaxTenuringThreshold=1 \
     -Dusing.aikars.flags=https://mcflags.emc.gs \
     -Daikars.new.flags=true \
-    -jar /server.jar --nogui"
+    -jar /mcfile/server.jar --nogui"

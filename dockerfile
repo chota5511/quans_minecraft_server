@@ -60,10 +60,14 @@ ENV max_world_size=29999984
 
 ADD ./jars/${MCFILE} /server.jar
 ADD ./run_mc.sh /run_mc.sh
+ADD ./init.sh /init.sh
+ADD ./reload_server_properties.sh /reload_server_properties.sh
 ADD ./entrypoint.sh /entrypoint.sh
 
 RUN apk upgrade --update
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /init.sh
 RUN chmod +x /run_mc.sh
+RUN chmod +x /reload_server_properties.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
