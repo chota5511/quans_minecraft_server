@@ -1,6 +1,6 @@
 # Quan's Minecraft Server
 ## Introduction <a name=introduction></a>
-A very lightweight Minecraft Server for Docker container is based on [Amazon Corretto](https://hub.docker.com/_/amazoncorretto) and [PaperMC](https://papermc.io)
+A very lightweight Minecraft Server for Docker container based on [Amazon Corretto](https://hub.docker.com/_/amazoncorretto) and [PaperMC](https://papermc.io)
 
 ## Table of content
   - [Introduction](#introduction)
