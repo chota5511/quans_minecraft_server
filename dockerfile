@@ -1,6 +1,6 @@
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:21-alpine-jdk
 
-ARG MCFILE=paper-1.19.2-270.jar
+ARG MCFILE=paper-1.21.4-225.jar
 
 ENV min_mem=2G
 ENV max_mem=2G
